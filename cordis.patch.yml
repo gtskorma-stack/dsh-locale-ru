@@ -1,0 +1,6 @@
+# dsh-locale-ru: register the dual-face language pack into the web roster.
+# The node half is a no-op so Loader can mount the package; the browser half
+# is discovered from package.json dsh.client and served through /plugins.
+- insert:
+    - id: locale-ru
+      name: dsh-locale-ru
