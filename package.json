@@ -1,0 +1,59 @@
+{
+  "name": "dsh-locale-ru",
+  "version": "1.0.0",
+  "description": "Russian (ru-RU) language pack for the DeepSeek Harness (DSH) web GUI. Uses the stock locale/i18n API without modifying DSH core.",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "locales/ru-RU.json",
+    "locales/en.json",
+    "scripts/self-test.mjs",
+    "scripts/build-client.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "scripts": {
+    "self-test": "node scripts/self-test.mjs",
+    "build:client": "node scripts/build-client.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "locale",
+    "i18n",
+    "russian"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gtskorma-stack/dsh-locale-ru.git"
+  },
+  "homepage": "https://github.com/gtskorma-stack/dsh-locale-ru#readme",
+  "bugs": {
+    "url": "https://github.com/gtskorma-stack/dsh-locale-ru/issues"
+  }
+}
